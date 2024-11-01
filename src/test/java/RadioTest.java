@@ -37,8 +37,8 @@ public class RadioTest {
 
     @Test
     void setNextStationNumOutline() {
-        Radio radio = new Radio();
-        radio.setCurrentStationNum(9);
+        Radio radio = new Radio(15);
+        radio.setCurrentStationNum(14);
         radio.next();
         int expected = 0;
         int actual = radio.getCurrentStationNum();
@@ -48,9 +48,9 @@ public class RadioTest {
 
     @Test
     void setPrevStationNumOutline() {
-        Radio radio = new Radio();
+        Radio radio = new Radio(5);
         radio.prev();
-        int expected = 9;
+        int expected = 4;
         int actual = radio.getCurrentStationNum();
 
         Assertions.assertEquals(expected, actual);
